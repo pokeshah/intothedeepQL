@@ -3,7 +3,7 @@
 """
 This is a Q-Learning system used to figure out how good it is to be at any given position on the Into the Deep board is. We have first defined the board,
 using arbitrary values to describe how we feel certain position are from the perspective of blue (ex. blue tower is very good, red tower is very bad). Then,
-we run a simulation 10,000,000 times of an AI agent that gets punished when it does certain actions (strays away from the blue side, goes into the red tower, etc.),
+we run a simulation 1,000,000,000 times of an AI agent that gets punished when it does certain actions (strays away from the blue side, goes into the red tower, etc.),
 and rewarded when it does something good (go to blue tower, go to the blue human sample area, etc.). The AI agents then learn from these rewards and punishments,
 improving over time and, using a mathematical formula, assign a value to each action possible (up, down, left, right) in each position on the board. We then average 
 all of these values to get a representation of how good it is to be in a certain position on the board.
@@ -178,7 +178,7 @@ if __name__ == '__main__':
     epsilon = 0.9  # the percentage of time when we should take the best action (instead of a random action)
     discount_factor = 0.9  # discount factor for future rewards
     learning_rate = 0.9  # the rate at which the AI agent should learn
-    num_episodes = 10000000  # the number of episodes the agent should undertake
+    num_episodes = 1000000000  # the number of episodes the agent should undertake
 
     q_values = train_agent(num_episodes, epsilon, discount_factor, learning_rate, actions)
     print("Training complete!")
