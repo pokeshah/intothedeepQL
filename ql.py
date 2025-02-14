@@ -178,7 +178,7 @@ if __name__ == '__main__':
     epsilon = 0.9  # the percentage of time when we should take the best action (instead of a random action)
     discount_factor = 0.9  # discount factor for future rewards
     learning_rate = 0.9  # the rate at which the AI agent should learn
-    num_episodes = 100000  # the number of episodes the agent should undertake
+    num_episodes = 10000000  # the number of episodes the agent should undertake
 
     q_values = train_agent(num_episodes, epsilon, discount_factor, learning_rate, actions)
     print("Training complete!")
